@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+  </head>
+  <body>
+    <header>
+      <svg>
+        <symbol id="text">
+          <text
+            class="animated-button animate__animated animate__bounceInUp"
+            id="hangman"
+            text-anchor="middle"
+            x="50%"
+            y="35%"
+          >
+            HANGMAN
+          </text>
+        </symbol>
+        <use xlink:href="#text"></use>
+      </svg>
+    </header>
+    <main>
+      <h2>Guess the secret word</h2>
+      <div class="game-container">
+        <svg height="300" width="200" class="figure-container">
+          <!-- Pole -->
+          <line x1="40" y1="20" x2="160" y2="20" />
+          <line
+            class="figure-part"
+            x1="140"
+            y1="30"
+            x2="140"
+            y2="90"
+            stroke="#ee9222"
+            stroke-width="4px"
+          />
+          <line x1="40" y1="20" x2="40" y2="280" />
+          <line x1="20" y1="280" x2="180" y2="280" />
+          <line x1="40" y1="70" x2="110" y2="20" />
+
+          <!-- Head -->
+          <circle
+            class="figure-part"
+            cx="160"
+            cy="82"
+            r="18"
+            stroke="#7c7774"
+            stroke-width="4px"
+          />
+
+          <!-- Body -->
+          <line
+            class="figure-part"
+            x1="140"
+            y1="110"
+            x2="140"
+            y2="140"
+            stroke="#7c7774"
+            stroke-width="26px"
+          />
+
+          <!-- Arms -->
+          <line
+            class="figure-part"
+            x1="140"
+            y1="97"
+            x2="110"
+            y2="140"
+            stroke="#7c7774"
+            stroke-width="14px"
+          />
+          <line
+            class="figure-part"
+            x1="150"
+            y1="100"
+            x2="170"
+            y2="140"
+            stroke="#7c7774"
+            stroke-width="14px"
+          />
+
+          <!-- Legs -->
+          <line
+            class="figure-part"
+            x1="134"
+            y1="140"
+            x2="135"
+            y2="190"
+            stroke="#7c7774"
+            stroke-width="14px"
+          />
+          <line
+            class="figure-part"
+            x1="144"
+            y1="140"
+            x2="160"
+            y2="190"
+            stroke="#7c7774"
+            stroke-width="14px"
+          />
+        </svg>
+        <div class="wrong-letters-container">
+          <div id="wrong-letters"></div>
+        </div>
+        <div class="word" id="word"></div>
+      </div>
+      <!-- Container for final message -->
+      <div class="popup-container" id="popup-container">
+        <div class="popup" id="final-message">
+          <h2 id="final-message"></h2>
+          <button id="play-button">Play Again</button>
+        </div>
+      </div>
+      <!-- Notification -->
+      <div class="notification-container" id="notification-container">
+        <p>You have already entered this letter</p>
+      </div>
+    </main>
+    <footer>
+      <!-- <span class="animate__animated animate__backInLeft">&copy; Peter</span>
+      <span class="animate__animated animate__backInRight"> &nbsp;Daniel</span> -->
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
