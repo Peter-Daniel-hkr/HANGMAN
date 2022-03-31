@@ -111,7 +111,6 @@ h2 {
   bottom: 0;
   left: 0;
   right: 0;
-  /* display: flex; */
   display: none;
   align-items: center;
   justify-content: center;
@@ -121,15 +120,17 @@ h2 {
   background-color: #f7ae15;
   border-radius: 8px;
   /* box-shadow: 0 15px 10px 3px rgba(0, 0, 255, 0.1); */
-  /* box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
     inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
-    inset 0 15px 15px rgba(0, 0, 0, 0.3); */
-  box-shadow: inset 6px 6px 6px #e7ae32, inset -6px -6px 6px #a07008;
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+  /* box-shadow: inset 6px 6px 6px #e7ae32, inset -6px -6px 6px #a07008; */
   padding: 20px;
   text-align: center;
 }
 
 .popup button {
+  height: 200px;
+  width: 200px;
   cursor: pointer;
   background-color: #f7ae15;
   border-radius: 8px;
